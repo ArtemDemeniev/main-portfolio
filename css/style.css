@@ -149,6 +149,7 @@ body{
     line-height: 18px;  
     max-width: 238px;
     text-align: center;
+    padding-bottom: 96px;
 }
 
 /* section 2 start */
@@ -240,11 +241,18 @@ body{
 
 .woman {
     border-radius: 50%;
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 335px
 }
 .woman1 {
     border-radius: 50%;
     margin-left: 204px;
     display: block;
+    width: 100%;
+    height: auto;
+    max-width: 335px
 }
 
 /* section 2 END */
@@ -328,7 +336,9 @@ z-index: -1;
     display: flex;
     justify-content: center;
     gap: 0 16px;
+    margin: 0 -8px;
     position: relative;
+    overflow-x: hidden;
 }
 .slider-row::after{
     content: "";
@@ -356,10 +366,13 @@ z-index: -1;
 }
 
 .slider-card {
-
+    flex: 0 0 calc(33.3333% - 28px);
 }
 .slider-img {
     border-radius: 120px 4px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 .slider-pagination {
     display: flex;
@@ -439,10 +452,20 @@ form{
     border-radius: 32px;
 border: 2px solid var(--beauty-landing-2-5, #747272);
 background-color: transparent;
+padding-left: 20px;
+    
+}
+.info:focus::placeholder{
+    color: transparent;
     
 }
 .info::placeholder{
-    padding-left: 32px;
+    color: var(--beauty-landing-2-background, #FFF);
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 .form-btn{
     text-align: center;
@@ -463,6 +486,7 @@ background-color: transparent;
 }
 .map{
     border-radius: 32px;
+    
 }
 /* whereweare end */
 .footer {
@@ -489,4 +513,39 @@ background-color: transparent;
 }
 .social__list-w{
 margin-top: 16px;
+}
+
+/* Адаптив */
+@media (min-width: 1100px) {
+    .woman {
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+        display: block;
+        max-width: 270px;
+    }
+    .woman1 {
+        border-radius: 50%;
+        margin-left: 115px;
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 270px;
+    }
+}
+
+
+/* Стилі для десктопа (ширина екрану більше 1024px) */
+@media (min-width: 1025px) {
+    /* ваші стилі тут */
+}
+
+  /* Стилі для планшета (ширина екрану від 768px до 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* ваші стилі тут */
+}
+
+  /* Стилі для мобільного (ширина екрану менше 768px) */
+@media (max-width: 767px) {
+    /* ваші стилі тут */
 }
